@@ -1,20 +1,28 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ServicesList from "./services/ServicesList";
 import ServiceDetails from "./services/ServiceDetails";
-import AddService from "./admin/AddService";        // ✅ FIXED - was AddServices
+import AddService from "./admin/AddServices"; // ✅ FIXED - was AddServices
 import "./App.css";
 import AdminServices from "./admin/AdminServices";
-import EditService from "./admin/EditService";      // ✅ FIXED - was EditServices
+import EditService from "./admin/EditServices"; // ✅ FIXED - was EditServices
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <nav style={navStyle}>
-          <Link to="/" style={linkStyle}>🏠 Home</Link>
-          <Link to="/services" style={linkStyle}>📋 Services</Link>
-          <Link to="/admin/services" style={linkStyle}>📊 Admin Panel</Link>
-          <Link to="/admin/add-service" style={linkStyle}>➕ Add Service</Link>
+          <Link to="/" style={linkStyle}>
+            🏠 Home
+          </Link>
+          <Link to="/services" style={linkStyle}>
+            📋 Services
+          </Link>
+          <Link to="/admin/services" style={linkStyle}>
+            📊 Admin Panel
+          </Link>
+          <Link to="/admin/add-service" style={linkStyle}>
+            ➕ Add Service
+          </Link>
         </nav>
 
         <Routes>
