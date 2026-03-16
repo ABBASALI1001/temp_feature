@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ServicesList from "./services/ServicesList";
 import ServiceDetails from "./services/ServiceDetails";
-import AddService from "./admin/AddService";        // ✅ FIXED
+import AddService from "./admin/AddService";        // ✅ FIXED - was AddServices
 import "./App.css";
 import AdminServices from "./admin/AdminServices";
-import EditService from "./admin/EditService";      // ✅ FIXED
+import EditService from "./admin/EditService";      // ✅ FIXED - was EditServices
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <nav style={navStyle}>
           <Link to="/" style={linkStyle}>🏠 Home</Link>
           <Link to="/services" style={linkStyle}>📋 Services</Link>
-          <Link to="/admin/services" style={linkStyle}>📊 Admin Panel</Link> {/* 👈 ADD THIS */}
+          <Link to="/admin/services" style={linkStyle}>📊 Admin Panel</Link>
           <Link to="/admin/add-service" style={linkStyle}>➕ Add Service</Link>
         </nav>
 
@@ -55,6 +55,7 @@ const linkStyle = {
   padding: "0.5rem 1rem",
   borderRadius: "4px",
   backgroundColor: "#555",
+  transition: "background-color 0.3s",
 };
 
 const containerStyle = {
